@@ -1,4 +1,4 @@
-# Covid Vaccine Slot Script
+# Covid Vaccine Tracker
 Find the vaccine availibility in a state
 
 ## How to Run
