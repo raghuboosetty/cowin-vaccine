@@ -32,7 +32,7 @@ class CowinVaccine
           availability[district['district_name']][center['name']] = [] unless availability[district['district_name']][center['name']]
           if session["available_capacity_dose#{dose}"].positive? && vaccines.any? { |v| session['vaccine'] == v } && session['min_age_limit'] == age
             availability[district['district_name']][center['name']] << { 
-              "#{session['date']} - #{session['vaccine']} - #{center['fee_type']}" => "Dose#{dose}(#{session['min_age_limit']}+): #{session['available_capacity_dose' + dose.to_s]}"
+              "#{session['date']}" => "D#{dose} #{session['min_age_limit']}+ #{session['vaccine']} #{center['fee_type']} #{center['vaccine_fees'].find {|fee| fee['vaccine'] == session['vaccine'] }.dig('fee')} - #{session['available_capacity_dose' + dose.to_s]}"
             }
           end
         end
@@ -57,6 +57,6 @@ class CowinVaccine
   end
 end
 
-cv = CowinVaccine.new(state_id: 32, dose: 1, age: 18, vaccines: ['COVAXIN'])
+cv = CowinVaccine.new(state_id: 32, dose: 2, age: 18, vaccines: ['COVAXIN'])
 cv.fetch_vaccines
 ap cv.availability
