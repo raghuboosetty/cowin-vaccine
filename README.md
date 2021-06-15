@@ -25,4 +25,4 @@ CowinVaccine.new(state_id: 32, dose: 1, age: 45, vaccines: ['COVAXIN'])
 * Telangana - 32
 
 ## Output
-![](yts-output.png)
+<img width="459" alt="Screenshot 2021-06-15 at 8 55 40 AM" src="https://user-images.githubusercontent.com/853315/121988176-7fb1cc80-cdb7-11eb-8b5e-b338e2311f49.png">
