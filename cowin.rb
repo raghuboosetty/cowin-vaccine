@@ -52,6 +52,6 @@ private
   end
 end
 
-cv = CowinVaccine.new(state_id: 21, dose: 1, age: 18, vaccines: ['COVAXIN'])
+cv = CowinVaccine.new(state_id: 32, dose: 1, age: 18, vaccines: ['COVAXIN'])
 cv.fetch_vaccines
 ap cv.availability
